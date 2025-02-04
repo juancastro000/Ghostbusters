@@ -1,7 +1,7 @@
 package com.ghostdevs.ghostbusters;
 
 /**
- * Hello world!
+ * Probando la integración de GitHub con Jenkins
  */
 public final class App {
     private App() {
