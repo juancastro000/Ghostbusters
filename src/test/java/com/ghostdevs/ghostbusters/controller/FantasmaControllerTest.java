@@ -9,11 +9,13 @@ import static org.hamcrest.Matchers.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+
 public class FantasmaControllerTest {
 
     @Test
     @DisplayName(" Comprueba si se añade un fantasma al contenedor")
     void testIfCapturarFantasma_AddFantasmaToContenedor() {
+
         ContenedorEctoplasmico contenedor = new ContenedorEctoplasmico();
         FantasmaController controller = new FantasmaController(contenedor);
 
@@ -24,9 +26,10 @@ public class FantasmaControllerTest {
             4,
             "Bajo",
             "Aparecer durante tormentas en la costa",
-            2025-02-04
+            "04022025"
         );
 
+        assertThat(controller, is(instanceOf(FantasmaController.class)));
         assertThat(contenedor.obtenerFantasmas(), hasSize(1));
         assertThat(fantasma.getNombre(), is("Espíritu del Pescador de Lastres"));
 

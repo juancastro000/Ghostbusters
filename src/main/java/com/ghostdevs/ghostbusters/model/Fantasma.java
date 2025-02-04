@@ -1,7 +1,7 @@
 package com.ghostdevs.ghostbusters.model;
 
 import java.time.LocalDate;
-import java.util.Date;
+
 
 
 public class Fantasma {
@@ -11,7 +11,7 @@ public class Fantasma {
     private int idClase;
     private String nivelPeligro;
     private String habilidadEspecial;
-    private Date fechaCaptura;
+    private LocalDate fechaCaptura;
 
     //Constructor vacio y por parametros
     public Fantasma() {
@@ -23,14 +23,14 @@ public class Fantasma {
         this.idClase = clase;
         this.nivelPeligro = nivelPeligro;
         this.habilidadEspecial = habilidadEspecial;
-        this.fechaCaptura = new Date();
+        this.fechaCaptura = fechaCaptura;
     }
     public Fantasma(String nombre, int clase, String nivelPeligro, String habilidadEspecial, LocalDate fechaCaptura) {
         this.nombre = nombre;
         this.idClase = clase;
         this.nivelPeligro = nivelPeligro;
         this.habilidadEspecial = habilidadEspecial;
-        this.fechaCaptura = new Date();
+        this.fechaCaptura = fechaCaptura;
     }
 
     public int getId() {
@@ -53,7 +53,7 @@ public class Fantasma {
         return habilidadEspecial;
     }
 
-    public Date getFechaCaptura() {
+    public LocalDate getFechaCaptura() {
         return fechaCaptura;
     }
 
