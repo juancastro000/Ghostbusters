@@ -48,7 +48,7 @@ public class FantasmaController {
     }
 
     public List<Fantasma> visualizarFantasmas(){
-        
+        return contenedor.obtenerFantasmas();
     }
 
 }
