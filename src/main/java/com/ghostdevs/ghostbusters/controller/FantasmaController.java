@@ -47,4 +47,8 @@ public class FantasmaController {
         return fantasmasLiberados;
     }
 
+    public List<Fantasma> visualizarFantasmas(){
+        
+    }
+
 }

@@ -61,6 +61,19 @@ public class FantasmaControllerTest {
         
     }
 
+    @Test
+    @DisplayName("comprueba si visualizar fantasma retorna una lista con los fantasmas")
+    void testVisualizarFantasmas() {
+
+        ContenedorEctoplasmico contenedor = new ContenedorEctoplasmico();
+        FantasmaController controller = new FantasmaController(contenedor);
+
+        controller.capturarFantasma(2, "Sombra del Naranco", 2, "Medio", "Induce miedo", "03022025");
+        controller.capturarFantasma( 1, "Espíritu del Pescador de Lastres", 4, "bajo", "Aparecer durante tormentas en la costa", "04022025");
+
+        assertThat(contenedor.obtenerFantasmas(), hasSize(2));
+    }
+
  
     
 }
