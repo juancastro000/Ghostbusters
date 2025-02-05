@@ -17,7 +17,7 @@ public class ContenedorEctoplasmico {
     }
 
     public List<Fantasma> obtenerFantasmas() {
-        return contenedorFantasma;
+        return this.contenedorFantasma;
     }
 
     
