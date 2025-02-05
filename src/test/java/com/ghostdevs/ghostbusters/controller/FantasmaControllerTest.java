@@ -33,8 +33,25 @@ public class FantasmaControllerTest {
         assertThat(contenedor.obtenerFantasmas(), hasSize(1));
         assertThat(fantasma.getNombre(), is("Espíritu del Pescador de Lastres"));
 
+        
 
 
+
+    }
+
+    @Test
+    @DisplayName("comprueba si se eliminan fantasmas del contenedor en base a su nivel de peligro")
+    void testIfLiberarFantasma_RemoveFantasmaFromContenedor() {
+
+        ContenedorEctoplasmico contenedor = new ContenedorEctoplasmico();
+        FantasmaController controller = new FantasmaController(contenedor);
+        String liberar = "Bajo";
+
+        Fantasma fantasma = controller.capturarFantasma(2, "Sombra del Naranco", 2, "Medio", "Induce miedo", "03022025");
+        controller.liberarFantasma(liberar);
+
+        assertThat(contenedor.obtenerFantasmas(), hasSize(1));
+        
     }
 
  
