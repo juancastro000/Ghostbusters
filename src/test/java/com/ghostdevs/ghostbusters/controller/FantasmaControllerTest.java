@@ -1,6 +1,5 @@
 package com.ghostdevs.ghostbusters.controller;
 
-import com.ghostdevs.ghostbusters.controller.FantasmaController;
 import com.ghostdevs.ghostbusters.model.ContenedorEctoplasmico;
 import com.ghostdevs.ghostbusters.model.Fantasma;
 

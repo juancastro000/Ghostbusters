@@ -13,19 +13,8 @@ public class Fantasma {
     private String habilidadEspecial;
     private LocalDate fechaCaptura;
 
-    //Constructor vacio y por parametros
-    public Fantasma() {
-    }
-
     public Fantasma(int id, String nombre, int clase, String nivelPeligro, String habilidadEspecial, LocalDate fechaCaptura) {
         this.id = id;
-        this.nombre = nombre;
-        this.idClase = clase;
-        this.nivelPeligro = nivelPeligro;
-        this.habilidadEspecial = habilidadEspecial;
-        this.fechaCaptura = fechaCaptura;
-    }
-    public Fantasma(String nombre, int clase, String nivelPeligro, String habilidadEspecial, LocalDate fechaCaptura) {
         this.nombre = nombre;
         this.idClase = clase;
         this.nivelPeligro = nivelPeligro;

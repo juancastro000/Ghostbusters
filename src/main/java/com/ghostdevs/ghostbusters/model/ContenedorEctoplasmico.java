@@ -5,9 +5,8 @@ import java.util.List;
 
 public class ContenedorEctoplasmico {
 
-    //Atributos
     private List<Fantasma> contenedorFantasma;
-    //Constructor
+
     public ContenedorEctoplasmico() {
         this.contenedorFantasma = new ArrayList<>();
     }
