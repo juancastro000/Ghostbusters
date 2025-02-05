@@ -70,8 +70,9 @@ public class FantasmaControllerTest {
 
         controller.capturarFantasma(2, "Sombra del Naranco", 2, "Medio", "Induce miedo", "03022025");
         controller.capturarFantasma( 1, "Espíritu del Pescador de Lastres", 4, "bajo", "Aparecer durante tormentas en la costa", "04022025");
+        List<Fantasma> fantasmasCapturados = controller.visualizarFantasmas();
 
-        assertThat(contenedor.obtenerFantasmas(), hasSize(2));
+        assertThat(fantasmasCapturados, hasSize(2));
     }
 
  
