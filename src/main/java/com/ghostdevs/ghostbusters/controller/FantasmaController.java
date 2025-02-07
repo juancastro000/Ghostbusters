@@ -17,13 +17,13 @@ public class FantasmaController {
         this.contenedor = contenedor;
     }
 
-    public Fantasma capturarFantasma(int id, String nombre, int idClase, String nivelPeligro, String habilidadEspecial, String fechaCaptura){
+    public Fantasma capturarFantasma(String nombre, int idClase, String nivelPeligro, String habilidadEspecial, String fechaCaptura){
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMyyyy");
         LocalDate fecha = LocalDate.parse(fechaCaptura, formatter);
         String peligro = nivelPeligro.toLowerCase();
 
-        Fantasma nuevoFantasma = new Fantasma(id, nombre, idClase, peligro, habilidadEspecial, fecha);
+        Fantasma nuevoFantasma = new Fantasma( nombre, idClase, peligro, habilidadEspecial, fecha);
         contenedor.agregarFantasma(nuevoFantasma);
         return nuevoFantasma;
     }

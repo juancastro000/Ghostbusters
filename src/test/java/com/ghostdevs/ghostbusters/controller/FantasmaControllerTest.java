@@ -23,7 +23,6 @@ public class FantasmaControllerTest {
 
 
         Fantasma fantasma = controller.capturarFantasma(
-            1,
             "Espíritu del Pescador de Lastres",
             4,
             "Bajo",
@@ -49,8 +48,8 @@ public class FantasmaControllerTest {
         FantasmaController controller = new FantasmaController(contenedor);
         String liberar = "Bajo";
 
-        controller.capturarFantasma(2, "Sombra del Naranco", 2, "Medio", "Induce miedo", "03022025");
-        controller.capturarFantasma( 1, "Espíritu del Pescador de Lastres", 4, "bajo", "Aparecer durante tormentas en la costa", "04022025");
+        controller.capturarFantasma( "Sombra del Naranco", 2, "Medio", "Induce miedo", "03022025");
+        controller.capturarFantasma(  "Espíritu del Pescador de Lastres", 4, "bajo", "Aparecer durante tormentas en la costa", "04022025");
         List<Fantasma> liberados = controller.liberarFantasma(liberar);
 
         assertThat(contenedor.obtenerFantasmas(), hasSize(1));
@@ -67,8 +66,8 @@ public class FantasmaControllerTest {
         ContenedorEctoplasmico contenedor = new ContenedorEctoplasmico();
         FantasmaController controller = new FantasmaController(contenedor);
 
-        controller.capturarFantasma(2, "Sombra del Naranco", 2, "Medio", "Induce miedo", "03022025");
-        controller.capturarFantasma( 1, "Espíritu del Pescador de Lastres", 4, "bajo", "Aparecer durante tormentas en la costa", "04022025");
+        controller.capturarFantasma( "Sombra del Naranco", 2, "Medio", "Induce miedo", "03022025");
+        controller.capturarFantasma(  "Espíritu del Pescador de Lastres", 4, "bajo", "Aparecer durante tormentas en la costa", "04022025");
         List<Fantasma> fantasmasCapturados = controller.visualizarFantasmas();
 
         assertThat(fantasmasCapturados, hasSize(2));

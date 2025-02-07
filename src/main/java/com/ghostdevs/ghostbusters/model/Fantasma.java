@@ -5,16 +5,16 @@ import java.time.LocalDate;
 
 
 public class Fantasma {
-
-    private int id;
+    private static int contador = 1;
+    private final int id;
     private String nombre;
     private int idClase;
     private String nivelPeligro;
     private String habilidadEspecial;
     private LocalDate fechaCaptura;
 
-    public Fantasma(int id, String nombre, int clase, String nivelPeligro, String habilidadEspecial, LocalDate fechaCaptura) {
-        this.id = id;
+    public Fantasma(String nombre, int clase, String nivelPeligro, String habilidadEspecial, LocalDate fechaCaptura) {
+        this.id = contador++;
         this.nombre = nombre;
         this.idClase = clase;
         this.nivelPeligro = nivelPeligro;

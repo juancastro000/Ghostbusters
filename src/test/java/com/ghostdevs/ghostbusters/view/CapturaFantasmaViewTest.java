@@ -30,7 +30,7 @@ class CapturaFantasmaViewTest {
     @Test
     void testCapturarFantasma() {
       
-        String simulatedInput = "2\n" +                  
+        String simulatedInput =                  
         "Sombra del Naranco\n" +  
         "2\n" +                  
         "Medio\n" +             

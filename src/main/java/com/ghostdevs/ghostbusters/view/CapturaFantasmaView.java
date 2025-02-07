@@ -17,10 +17,6 @@ public class CapturaFantasmaView {
     public void capturarFantasma() {
         System.out.println("===== Captura de Fantasma =====");
 
-     
-        int id = solicitarEntero("Ingrese el ID del fantasma: ");
-
-       
         System.out.print("Ingrese el nombre del fantasma: ");
         String nombre = scanner.nextLine().trim();
 
@@ -40,7 +36,7 @@ public class CapturaFantasmaView {
         String fechaCaptura = scanner.nextLine().trim();
 
        
-        Fantasma fantasma = controller.capturarFantasma(id, nombre, idClase, nivelPeligro, habilidadEspecial, fechaCaptura);
+        Fantasma fantasma = controller.capturarFantasma( nombre, idClase, nivelPeligro, habilidadEspecial, fechaCaptura);
 
         System.out.println("¡Fantasma capturado exitosamente: " + fantasma.getNombre() + "!");
     }
