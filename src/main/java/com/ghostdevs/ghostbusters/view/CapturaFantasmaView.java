@@ -15,31 +15,44 @@ public class CapturaFantasmaView {
     }
 
     public void capturarFantasma() {
-        System.out.println("Ingrese los datos del fantasma en el siguiente formato:");
-        System.out.println("ID\\Nombre\\ID Clase\\Nivel de Peligro\\Habilidad Especial\\Fecha de Captura (ddMMyyyy)");
+        System.out.println("===== Captura de Fantasma =====");
 
-        String input = scanner.nextLine();
-        String[] datos = input.split("\\\\");
+     
+        int id = solicitarEntero("Ingrese el ID del fantasma: ");
 
-        if (datos.length < 6) {
-            System.out.println("Error: Formato incorrecto.");
-            return;
-        }
+       
+        System.out.print("Ingrese el nombre del fantasma: ");
+        String nombre = scanner.nextLine().trim();
 
-        try {
-            int id = Integer.parseInt(datos[0]);
-            String nombre = datos[1];
-            int idClase = Integer.parseInt(datos[2]);
-            String nivelPeligro = datos[3];
-            String habilidadEspecial = datos[4];
-            String fechaCaptura = datos[5];
+       
+        int idClase = solicitarEntero("Ingrese el ID de la clase del fantasma (1-7): ");
 
-           
-            Fantasma fantasma = controller.capturarFantasma(id, nombre, idClase, nivelPeligro, habilidadEspecial, fechaCaptura);
-            
-            System.out.println("¡Fantasma capturado exitosamente: " + fantasma.getNombre() + "!");
-        } catch (NumberFormatException e) {
-            System.out.println("Error: ID e ID Clase deben ser números enteros.");
+        
+        System.out.print("Ingrese el nivel de peligro (Bajo, Medio, Alto, Crítico): ");
+        String nivelPeligro = scanner.nextLine().trim();
+
+       
+        System.out.print("Ingrese la habilidad especial del fantasma: ");
+        String habilidadEspecial = scanner.nextLine().trim();
+
+        
+        System.out.print("Ingrese la fecha de captura (ddMMyyyy): ");
+        String fechaCaptura = scanner.nextLine().trim();
+
+       
+        Fantasma fantasma = controller.capturarFantasma(id, nombre, idClase, nivelPeligro, habilidadEspecial, fechaCaptura);
+
+        System.out.println("¡Fantasma capturado exitosamente: " + fantasma.getNombre() + "!");
+    }
+
+    private int solicitarEntero(String mensaje) {
+        while (true) {
+            System.out.print(mensaje);
+            try {
+                return Integer.parseInt(scanner.nextLine().trim());
+            } catch (NumberFormatException e) {
+                System.out.println("Error: Debe ingresar un número entero válido.");
+            }
         }
     }
 }

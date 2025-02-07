@@ -29,19 +29,24 @@ class CapturaFantasmaViewTest {
 
     @Test
     void testCapturarFantasma() {
-        // Simular entrada del usuario
-        String simulatedInput = "2\\Sombra del Naranco\\2\\Medio\\Induce miedo\\03022025\n";
+      
+        String simulatedInput = "2\n" +                  
+        "Sombra del Naranco\n" +  
+        "2\n" +                  
+        "Medio\n" +             
+        "Induce miedo\n" +      
+        "03022025\n";         
         System.setIn(new ByteArrayInputStream(simulatedInput.getBytes()));
 
-        // Ejecutar la vista con el controlador real
+        
         CapturaFantasmaView view = new CapturaFantasmaView(controller);
         view.capturarFantasma();
 
-        // Verificar que el fantasma ha sido agregado al controlador
+       
         Fantasma capturado = controller.visualizarFantasmas().get(0);
         assertThat(capturado.getNombre(), containsString("Sombra del Naranco"));
 
-        // Verificar la salida en consola
+       
         String output = outputStream.toString();
         assertThat(output, containsString("¡Fantasma capturado exitosamente: Sombra del Naranco!"));
     }
