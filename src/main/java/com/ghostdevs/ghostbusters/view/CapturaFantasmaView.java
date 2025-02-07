@@ -1,5 +1,10 @@
 package com.ghostdevs.ghostbusters.view;
 
-public class CapturaFantasmaView {
+import com.ghostdevs.ghostbusters.controller.FantasmaController;
+import com.ghostdevs.ghostbusters.model.Fantasma;
 
+import java.util.Scanner;
+
+public class CapturaFantasmaView {
+   
 }

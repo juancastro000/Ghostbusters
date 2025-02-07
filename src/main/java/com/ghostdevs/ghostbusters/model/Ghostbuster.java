@@ -3,6 +3,10 @@ package com.ghostdevs.ghostbusters.model;
 public class Ghostbuster {
 
     private String usuario;
+    
+    public Ghostbuster(String usuario) {
+        this.usuario = usuario;
+    }
 
     public String getUsuario() {
         return usuario;
@@ -12,11 +16,6 @@ public class Ghostbuster {
         this.usuario = usuario;
     }
 
-    public Ghostbuster(String usuario) {
-        this.usuario = usuario;
-    }
+   
 
-    public void capturarFantasma(){
-
-    }
 }
