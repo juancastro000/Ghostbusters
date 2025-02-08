@@ -3,7 +3,7 @@ package com.ghostdevs.ghostbusters.view;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.not;
-import static org.hamcrest.Matchers.is;
+
 
 import com.ghostdevs.ghostbusters.controller.FantasmaController;
 import com.ghostdevs.ghostbusters.model.Fantasma;
