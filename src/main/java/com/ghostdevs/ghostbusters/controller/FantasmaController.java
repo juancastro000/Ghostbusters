@@ -38,7 +38,9 @@ public class FantasmaController {
         while (iterator.hasNext()) {
             Fantasma fantasma = iterator.next();
            
-            if(fantasma.getNivelPeligro().equalsIgnoreCase(liberar)){
+            if (fantasma.getNivelPeligro().equalsIgnoreCase(liberar) &&
+            !fantasma.getNivelPeligro().equalsIgnoreCase("Alto") &&
+            !fantasma.getNivelPeligro().equalsIgnoreCase("Crítico")) {
                 fantasmasLiberados.add(fantasma);
                 iterator.remove();
             }
