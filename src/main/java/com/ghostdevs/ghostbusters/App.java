@@ -1,19 +1,19 @@
 package com.ghostdevs.ghostbusters;
 
-/**
- * Probando la integración de GitHub con Jenkins
- */
-public final class App {
-    private App() {
-    }
+import com.ghostdevs.ghostbusters.controller.FantasmaController;
+import com.ghostdevs.ghostbusters.model.ContenedorEctoplasmico;
+import com.ghostdevs.ghostbusters.view.MenuPrincipal;
 
-    /**
-     * Says hello to the world.
-     * @param args The arguments of the program.
-     */
+public class App {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
+        // Inicializamos el contenedor de fantasmas y el controlador
+        ContenedorEctoplasmico contenedor = new ContenedorEctoplasmico();
+        FantasmaController controller = new FantasmaController(contenedor);
 
+        // Iniciamos el menú principal
+        MenuPrincipal menu = new MenuPrincipal(controller);
+        menu.mostrarMenu();
+  
+    }
     
 }
