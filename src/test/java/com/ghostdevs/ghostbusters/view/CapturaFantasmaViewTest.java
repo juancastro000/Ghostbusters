@@ -22,9 +22,9 @@ class CapturaFantasmaViewTest {
     @BeforeEach
     void setUp() {
         contenedor = new ContenedorEctoplasmico(); 
-        controller = new FantasmaController(contenedor);  // Usamos un controlador real
+        controller = new FantasmaController(contenedor);  
         outputStream = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outputStream));  // Capturamos la salida de consola
+        System.setOut(new PrintStream(outputStream)); 
     }
 
     @Test
